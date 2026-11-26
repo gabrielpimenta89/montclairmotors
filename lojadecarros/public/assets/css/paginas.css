@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap");
+/* Estilo cinematográfico nas demais páginas do site (carros, detalhes, interesses, login, cadastro e rodapé). */
+:root{--serifa:"Instrument Serif",Georgia,"Times New Roman",serif;--fundo:#02050d;--card:#0a1226}
+em{font-family:var(--serifa);font-style:italic;font-weight:400;letter-spacing:-.01em;color:var(--azul-claro)}
+
+/* cabeçalho: links pequenos, em maiúsculas e espaçados */
+.topo nav a,.topo nav summary{font-size:.76rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase}
+.topo nav .entrar-menu a{font-size:.95rem;font-weight:300;letter-spacing:0;text-transform:none}
+.topo nav .entrar-menu strong{font-weight:600}
+@media(max-width:640px){.topo nav a,.topo nav summary{font-size:.68rem;letter-spacing:.08em}}
+
+/* faixa de título (Nossos carros, Meus interesses) */
+.pagina-topo{padding:10rem var(--margem) 3rem}
+.pagina-topo h1{font-weight:600;letter-spacing:-.04em}
+.pagina-topo p{font-size:1.1rem;color:var(--suave)}
+.chip{border-color:rgba(255,255,255,.25);font-size:.78rem;letter-spacing:.06em}
+
+/* vitrine escura */
+.catalogo-pagina{padding-top:2.5rem;background:var(--fundo);color:var(--branco)}
+.catalogo-pagina .grade{gap:1.6rem}
+.catalogo-pagina .carro{overflow:hidden;padding-bottom:1.4rem;border:1px solid rgba(255,255,255,.09);border-radius:1.6rem;background:var(--card);transition:border-color .4s}
+.catalogo-pagina .carro:hover{border-color:rgba(58,165,255,.5)}
+.catalogo-pagina .foto{border-radius:0}
+.catalogo-pagina .carro h3,.catalogo-pagina .carro .mini,.catalogo-pagina .carro .preco,.catalogo-pagina .carro form{margin-inline:1.4rem}
+.catalogo-pagina .carro h3{margin-top:1.2rem;font-weight:600}
+.catalogo-pagina .mini{color:var(--suave)}
+.catalogo-pagina .carro:hover .preco{color:var(--azul-claro)}
+.catalogo-pagina .preco{font-weight:300;font-size:1.3rem}
+.catalogo-pagina .vazio,.catalogo-pagina .vazio a{color:var(--suave)}
+.catalogo-pagina .limpar,.catalogo-pagina .voltar{color:var(--azul-claro)}
+.catalogo-pagina .remover:hover{color:var(--azul-claro)}
+
+/* detalhes do carro */
+.det-hero{position:relative;isolation:isolate;display:flex;flex-direction:column;justify-content:flex-end;min-height:min(100svh,58rem);padding:0;background:var(--fundo)}
+.det-hero .detalhe-foto{position:absolute;inset:0;z-index:-2;max-width:none;margin:0;aspect-ratio:auto;border-radius:0;background:radial-gradient(70% 70% at 70% 30%,rgba(10,108,240,.5),#06142e);animation:aparece 1.2s var(--curva) both}
+.det-hero .detalhe-foto img{opacity:.88}
+.det-hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(2,5,13,.78),rgba(2,5,13,.05) 65%),linear-gradient(180deg,rgba(2,5,13,.55),transparent 30%,rgba(2,5,13,.4) 62%,var(--fundo))}
+.det-hero .detalhe-corpo{max-width:none;margin:0;padding:9rem var(--margem) 3.2rem;align-items:flex-end;gap:2rem}
+.det-titulo{display:grid;gap:1rem;justify-items:start}
+.det-etiqueta{font-size:.72rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--azul-claro)}
+.det-hero h1{font-size:clamp(3rem,9vw,8rem);font-weight:600;letter-spacing:-.045em;line-height:.95}
+.det-hero .detalhe-preco{font-size:clamp(1.8rem,3.4vw,2.8rem);font-weight:300;color:var(--branco);text-align:right}
+.det-hero .acoes{justify-content:flex-end;margin-top:1.2rem}
+.det-h2{margin-bottom:2.4rem;font-size:clamp(2rem,4.6vw,3.6rem);font-weight:600;letter-spacing:-.04em;line-height:1.02}
+
+.ficha{padding:5.5rem var(--margem) 2rem;background:var(--fundo)}
+.ficha .specs{display:grid;grid-template-columns:repeat(auto-fit,minmax(13rem,1fr));gap:1rem;padding:0;background:none;color:var(--branco)}
+.ficha .specs div{padding:1.6rem;border:1px solid rgba(255,255,255,.1);border-radius:1.4rem;background:var(--card);transition:border-color .4s,transform .5s var(--curva)}
+.ficha .specs div:hover{border-color:rgba(58,165,255,.5);transform:translateY(-4px)}
+.ficha .specs dt{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;opacity:.55;margin-top:.5rem}
+.ficha .specs dd{font-weight:300;font-size:clamp(1.8rem,3.4vw,2.8rem);letter-spacing:-.03em}
+
+.simulador{padding:4rem var(--margem) 5rem;background:var(--fundo)}
+.simulador .sim-intro,.simulador .sim-corpo{max-width:none}
+.simulador h2{font-weight:600;letter-spacing:-.04em}
+.sim-corpo{gap:2.5rem clamp(2rem,5vw,4.5rem);margin-top:2rem;padding:clamp(1.4rem,3vw,2.6rem);border:1px solid rgba(255,255,255,.1);border-radius:2rem;background:var(--card)}
+.sim-resultado{padding:2rem;border:0;border-radius:1.5rem;background:radial-gradient(90% 90% at 80% 0,rgba(10,108,240,.55),#06142e)}
+.sim-resultado strong{font-weight:300;color:var(--branco)}
+.sim-campo input[type=range]{-webkit-appearance:none;appearance:none;height:4px;border-radius:99px;background:rgba(255,255,255,.2)}
+.sim-campo input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;height:22px;border:4px solid var(--card);border-radius:50%;background:var(--azul-claro);box-shadow:0 0 0 1px var(--azul-claro);cursor:pointer}
+.sim-campo input[type=range]::-moz-range-thumb{width:14px;height:14px;border:4px solid var(--card);border-radius:50%;background:var(--azul-claro);cursor:pointer}
+
+.relacionados{padding:3rem var(--margem) 6rem;background:var(--fundo)}
+.rel-grade{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,19rem),1fr));gap:1.2rem}
+.rel-card{overflow:hidden;border:1px solid rgba(255,255,255,.09);border-radius:1.6rem;background:var(--card);transition:border-color .4s}
+.rel-card:hover{border-color:rgba(58,165,255,.5)}
+.rel-card .foto{border-radius:0}
+.rel-card:hover .foto img{transform:scale(1.07)}
+.rel-info{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;padding:1.2rem 1.4rem 1.4rem}
+.rel-info h3{font-size:1.2rem;font-weight:600;letter-spacing:-.02em}
+.rel-info span{font-weight:300;color:var(--azul-claro);white-space:nowrap}
+@media(max-width:800px){
+  .det-hero{min-height:88svh}
+  .det-hero .detalhe-corpo{flex-direction:column;align-items:flex-start}
+  .det-hero .detalhe-preco{text-align:left}
+  .det-hero .acoes{justify-content:flex-start}
+}
+
+/* login e cadastro do cliente: versão escura */
+.entrada{background:var(--fundo);color:var(--branco)}
+.entrada-form{background:radial-gradient(55rem 32rem at 10% 0,rgba(10,108,240,.28),transparent 65%),var(--fundo)}
+.entrada-logo img{filter:none}
+.entrada-sub{color:rgba(255,255,255,.6)}
+.entrada-campo{border-color:rgba(255,255,255,.18);background:rgba(255,255,255,.05);color:var(--branco)}
+.entrada-campo::placeholder{color:rgba(255,255,255,.42)}
+.entrada-campo:focus{border-color:var(--azul-claro);background:rgba(255,255,255,.08);box-shadow:0 0 0 4px rgba(58,165,255,.22)}
+.entrada-campo:-webkit-autofill{-webkit-text-fill-color:#fff;box-shadow:0 0 0 100px var(--card) inset}
+.entrada-botao{background:var(--azul)}
+.entrada-botao:hover{background:#0848b8}
+.entrada-troca{color:rgba(255,255,255,.6)}
+.entrada-troca a{color:var(--branco)}
+.entrada-troca a:hover{color:var(--azul-claro)}
+.entrada-rodape{color:rgba(255,255,255,.5)}
+.entrada-rodape a:hover{color:var(--branco)}
+.entrada .aviso{border-left-color:var(--azul-claro);background:rgba(255,255,255,.08);color:var(--branco)}
+.entrada-arte{position:relative}
+.entrada-arte img{filter:invert(1)}
+.entrada-arte::after{content:"";position:absolute;inset:0;background:var(--azul);mix-blend-mode:multiply;pointer-events:none}
+
+/* rodapé com o nome da marca gigante */
+.rodape-marca{padding:4rem 0 .1em;background:var(--fundo);font-size:clamp(3rem,13.2vw,15rem);font-weight:800;letter-spacing:-.04em;line-height:.82;text-align:center;white-space:nowrap;color:transparent;-webkit-text-stroke:1.5px rgba(255,255,255,.2);background-image:linear-gradient(180deg,rgba(58,165,255,.45),transparent 80%);-webkit-background-clip:text;background-clip:text;user-select:none}
+.rodape{background:var(--fundo)}
