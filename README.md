@@ -1,4 +1,4 @@
-# **Prime Motors -  Sistema web de Loja de Carros 🚗**
+# **Montclair Motors-  Sistema web de Loja de Carros 🚗**
 
 Sistema web desenvolvido em PHP utilizando padrão de arquitetura MVC (MODELS-VIEWS-CONTROLLERS) para gerenciamento de uma loja de carros.
 
@@ -10,7 +10,7 @@ Sistema web desenvolvido em PHP utilizando padrão de arquitetura MVC (MODELS-VI
 
 O sistema possui uma tela de autenticação para controlar o acesso dos usuários. O login é realizado por meio de e-mail e senha cadastrados no banco de dados MySQL.
 Após a validação dos dados, o usuário é redirecionado para a dashboard do sistema, onde poderá acessar as funcionalidades disponíveis.
-![alt text](public/assets/print-login.png)
+<img width="1902" height="877" alt="image" src="https://github.com/user-attachments/assets/4791ef5f-a37c-4755-a334-e8993c63181e" />
 
 
 
